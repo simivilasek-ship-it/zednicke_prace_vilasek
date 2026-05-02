@@ -260,6 +260,147 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.toggle('active');
     });
 
+    // ─── Mobilní carousel pro sekci Realizace ─────────────────────────
+    (function initRealizaceCarousel() {
+        const carousel = document.getElementById('demo');
+        if (!carousel) return;
+
+        const track = carousel.querySelector('.carousel-track');
+        const slides = carousel.querySelectorAll('.carousel-item');
+        const indicators = carousel.querySelectorAll('.carousel-indicators button');
+        const prevBtn = carousel.querySelector('.carousel-control-prev');
+        const nextBtn = carousel.querySelector('.carousel-control-next');
+
+        if (!track || slides.length === 0) return;
+
+        let currentIndex = 0;
+        let autoplayTimer = null;
+        let startX = 0;
+        let isDragging = false;
+        let dragStartX = 0;
+
+        const AUTOPLAY_MS = 4000;
+
+        // Nastaví výšku slide podle poměru stran fotek
+        function setSlideHeight() {
+            const firstImg = slides[0].querySelector('img');
+            if (firstImg && firstImg.complete) {
+                const ratio = firstImg.naturalHeight / firstImg.naturalWidth;
+                const h = carousel.clientWidth * ratio;
+                carousel.style.minHeight = Math.min(h, window.innerHeight * 0.7) + 'px';
+            }
+            // default fallback
+            if (!carousel.style.minHeight || carousel.style.minHeight === '0px') {
+                carousel.style.minHeight = '320px';
+            }
+        }
+
+        // Přejde na slide s indexem
+        function goTo(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            currentIndex = index;
+
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            track.classList.remove('dragging');
+
+            indicators.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function move(direction) {
+            goTo(currentIndex + direction);
+            resetAutoplay();
+        }
+
+        // ─── Autoplay ───────────────────────────────────────────────
+        function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(() => goTo(currentIndex + 1), AUTOPLAY_MS);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) { clearInterval(autoplayTimer);
+                autoplayTimer = null; }
+        }
+
+        function resetAutoplay() { stopAutoplay();
+            startAutoplay(); }
+
+        // ─── Události ───────────────────────────────────────────────
+        if (prevBtn) prevBtn.addEventListener('click', () => move(-1));
+        if (nextBtn) nextBtn.addEventListener('click', () => move(1));
+
+        indicators.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goTo(parseInt(dot.dataset.slide));
+                resetAutoplay();
+            });
+        });
+
+        // ─── Drag / Swipe ──────────────────────────────────────────
+        function onDragStart(clientX) {
+            isDragging = true;
+            dragStartX = clientX;
+            startX = clientX;
+            track.classList.add('dragging');
+            stopAutoplay();
+        }
+
+        function onDragMove(clientX) {
+            if (!isDragging) return;
+            const diff = clientX - dragStartX;
+            const pct = (diff / track.clientWidth) * 100;
+            track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${pct}px))`;
+        }
+
+        function onDragEnd(clientX) {
+            if (!isDragging) return;
+            isDragging = false;
+            const diff = startX - clientX;
+            track.classList.remove('dragging');
+
+            if (Math.abs(diff) > 50) {
+                goTo(currentIndex + (diff > 0 ? 1 : -1));
+            } else {
+                goTo(currentIndex);
+            }
+            startAutoplay();
+        }
+
+        // Dotyk
+        track.addEventListener('touchstart', e => onDragStart(e.touches[0].clientX), { passive: true });
+        track.addEventListener('touchmove', e => onDragMove(e.touches[0].clientX), { passive: true });
+        track.addEventListener('touchend', e => onDragEnd(e.changedTouches[0].clientX), { passive: true });
+
+        // Myš (pro testování na desktopu)
+        track.addEventListener('mousedown', e => { onDragStart(e.clientX);
+            e.preventDefault(); });
+        document.addEventListener('mousemove', e => { if (isDragging) onDragMove(e.clientX); });
+        document.addEventListener('mouseup', e => { if (isDragging) onDragEnd(e.clientX); });
+
+        // ─── Resize ─────────────────────────────────────────────────
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                setSlideHeight();
+                if (window.innerWidth >= 768) {
+                    stopAutoplay();
+                    track.style.transform = '';
+                } else {
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            }, 150);
+        });
+
+        // Inicializace
+        setSlideHeight();
+        goTo(0);
+        startAutoplay();
+    })();
+
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {

@@ -27,6 +27,8 @@
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
 
+
+
                 <span>Zednické práce Vilášek</span>
             </a>
 
@@ -197,7 +199,60 @@
             <p class="section-subtitle">Podívejte se na ukázky našich realizací – zateplení, fasády, rekonstrukce a další stavební práce</p>
         </div>
 
-        <div class="gallery-grid">
+        <div id="demo" class="carousel d-md-none">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-slide="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-slide="1" aria-label="Slide 2"></button>
+                <button type="button" data-slide="2" aria-label="Slide 3"></button>
+                <button type="button" data-slide="3" aria-label="Slide 4"></button>
+                <button type="button" data-slide="4" aria-label="Slide 5"></button>
+                <button type="button" data-slide="5" aria-label="Slide 6"></button>
+                <button type="button" data-slide="6" aria-label="Slide 7"></button>
+                <button type="button" data-slide="7" aria-label="Slide 8"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-track">
+                    <div class="carousel-item active">
+                        <img src="images/20181126_142730-min.jpg" alt="Zateplení domu">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Copilot_20260429_202255.png" alt="Fasáda">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Gemini_Generated_Image_nkyvfinkyvfinkyv.png" alt="Rekonstrukce">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Copilot_20260429_191603.png" alt="Zednické práce">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/ChatGPT Image 29. 4. 2026 19_14_39.png" alt="Oprava fasády">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/ChatGPT Image 29. 4. 2026 19_11_48.png" alt="Izolace">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Copilot_20260429_191103.png" alt="Rekonstrukce interiéru">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/ChatGPT Image 29. 4. 2026 19_19_53.png" alt="Naše práce">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" aria-label="Předchozí">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" aria-label="Další">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div class="gallery-grid d-none d-md-grid">
             <img src="images/20181126_142730-min.jpg" alt="Zateplení domu" class="gallery-image">
             <img src="images/Copilot_20260429_202255.png" alt="Fasáda" class="gallery-image">
             <img src="images/Gemini_Generated_Image_nkyvfinkyvfinkyv.png" alt="Rekonstrukce" class="gallery-image">
@@ -208,6 +263,7 @@
             <img src="images/ChatGPT Image 29. 4. 2026 19_19_53.png" alt="Naše práce" class="gallery-image">
         </div>
     </section>
+
 
     <!-- About Section -->
     <section class="about-section" id="O nás">

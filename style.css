@@ -827,6 +827,18 @@ nav {
     background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.15), transparent);
 }
 
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.15), transparent);
+}
+
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -973,22 +985,24 @@ nav {
         margin: 0 auto;
     }
     .usp-item {
-        flex-direction: row;
-        text-align: left;
-        padding: 16px 18px;
-        gap: 16px;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 18px;
+        gap: 12px;
         align-items: center;
     }
-    .usp-icon {
+        .usp-icon {
         width: 38px;
         height: 38px;
         flex-shrink: 0;
     }
     .usp-number {
         font-size: 0.95rem;
+        text-align: center;
     }
     .usp-label {
         font-size: 0.8rem;
+        text-align: center;
     }
 }
 

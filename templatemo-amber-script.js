@@ -1,12 +1,4 @@
-/* 
 
-JavaScript Document
-
-TemplateMo 615 Amber Folio
-
-https://templatemo.com/tm-615-amber-folio
-
-*/
 
 // Coverflow Class
 class PhotoCoverflow {
@@ -460,6 +452,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Check on load
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Check on load
 });

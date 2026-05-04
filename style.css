@@ -665,8 +665,6 @@ nav {
     gap: 9px;
     padding: 10px 0;
     margin: 0;
-    background: rgba(10, 10, 10, 0.28);
-    backdrop-filter: blur(10px);
     z-index: 3;
 }
 

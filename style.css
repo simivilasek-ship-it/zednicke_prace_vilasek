@@ -1401,7 +1401,8 @@ footer {
     .contact-section {
         padding: 60px 20px 70px;
     }
-        .gallery-grid {
+        .gal
+        lery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
         padding: 0 10px;

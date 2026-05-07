@@ -273,20 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const AUTOPLAY_MS = 4000;
 
-        // Nastaví výšku slide podle poměru stran fotek
-        function setSlideHeight() {
-            const firstImg = slides[0].querySelector('img');
-            if (firstImg && firstImg.complete) {
-                const ratio = firstImg.naturalHeight / firstImg.naturalWidth;
-                const h = carousel.clientWidth * ratio;
-                carousel.style.minHeight = Math.min(h, window.innerHeight * 0.7) + 'px';
-            }
-            // default fallback
-            if (!carousel.style.minHeight || carousel.style.minHeight === '0px') {
-                carousel.style.minHeight = '320px';
-            }
-        }
-
         // Přejde na slide s indexem
         function goTo(index) {
             if (index < 0) index = slides.length - 1;
@@ -377,7 +363,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                setSlideHeight();
                 if (window.innerWidth >= 768) {
                     stopAutoplay();
                     track.style.transform = '';
@@ -388,7 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Inicializace
-        setSlideHeight();
         goTo(0);
         startAutoplay();
     })();
@@ -437,6 +421,121 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ─── Kontaktní formulář ────────────────────────────────────────
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const message = document.getElementById('formMessage').value.trim();
+
+            if (!name || !phone) {
+                [document.getElementById('formName'), document.getElementById('formPhone')].forEach(el => {
+                    if (!el.value.trim()) el.style.borderColor = '#c0392b';
+                });
+                return;
+            }
+
+            const subject = encodeURIComponent('Poptávka – ' + name);
+            const body = encodeURIComponent(
+                'Jméno: ' + name + '\n' +
+                'Telefon / e-mail: ' + phone + '\n\n' +
+                'Projekt:\n' + (message || '(nevyplněno)')
+            );
+            window.location.href = 'mailto:vilasekmichael@seznam.cz?subject=' + subject + '&body=' + body;
+
+            const btn = contactForm.querySelector('.form-submit');
+            const orig = btn.textContent;
+            btn.textContent = 'Odesláno ✓';
+            btn.style.background = '#2d7a3a';
+            contactForm.reset();
+            setTimeout(() => {
+                btn.textContent = orig;
+                btn.style.background = '';
+            }, 4000);
+        });
+
+        contactForm.querySelectorAll('.form-input').forEach(el => {
+            el.addEventListener('input', () => { el.style.borderColor = ''; });
+        });
+    }
+
+    // ─── Lightbox ─────────────────────────────────────────────────
+    (function initLightbox() {
+        const lb = document.getElementById('lightbox');
+        if (!lb) return;
+        const lbImg = document.getElementById('lightboxImg');
+        const lbCounter = document.getElementById('lightboxCounter');
+        const lbClose = document.getElementById('lightboxClose');
+        const lbPrev = document.getElementById('lightboxPrev');
+        const lbNext = document.getElementById('lightboxNext');
+
+        const sources = [
+            { src: 'images/20181126_142730-min.jpg', alt: 'Zateplení domu' },
+            { src: 'images/Copilot_20260429_202255.png', alt: 'Fasáda' },
+            { src: 'images/Gemini_Generated_Image_nkyvfinkyvfinkyv.png', alt: 'Rekonstrukce' },
+            { src: 'images/Copilot_20260429_191603.png', alt: 'Zednické práce' },
+            { src: 'images/ChatGPT Image 29. 4. 2026 19_14_39.png', alt: 'Oprava fasády' },
+            { src: 'images/ChatGPT Image 29. 4. 2026 19_11_48.png', alt: 'Izolace' },
+            { src: 'images/Copilot_20260429_191103.png', alt: 'Rekonstrukce interiéru' },
+            { src: 'images/ChatGPT Image 29. 4. 2026 19_19_53.png', alt: 'Naše práce' },
+        ];
+
+        let current = 0;
+
+        function show(index) {
+            current = (index + sources.length) % sources.length;
+            lbImg.style.opacity = '0';
+            setTimeout(() => {
+                lbImg.src = sources[current].src;
+                lbImg.alt = sources[current].alt;
+                lbCounter.textContent = (current + 1) + ' / ' + sources.length;
+                lbImg.style.opacity = '1';
+            }, 150);
+        }
+
+        function open(index) {
+            show(index);
+            lb.style.display = 'flex';
+            requestAnimationFrame(() => { lb.style.opacity = '1'; });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            lb.style.opacity = '0';
+            setTimeout(() => { lb.style.display = 'none'; }, 300);
+            document.body.style.overflow = '';
+        }
+
+        lbClose.addEventListener('click', close);
+        lbPrev.addEventListener('click', () => show(current - 1));
+        lbNext.addEventListener('click', () => show(current + 1));
+        lb.addEventListener('click', e => { if (e.target === lb) close(); });
+
+        document.addEventListener('keydown', e => {
+            if (lb.style.display !== 'flex') return;
+            if (e.key === 'Escape') close();
+            if (e.key === 'ArrowLeft') show(current - 1);
+            if (e.key === 'ArrowRight') show(current + 1);
+        });
+
+        let lbTouchX = 0;
+        lb.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+        lb.addEventListener('touchend', e => {
+            const diff = lbTouchX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) diff > 0 ? show(current + 1) : show(current - 1);
+        }, { passive: true });
+
+        document.querySelectorAll('.carousel-item').forEach((item, i) => {
+            item.addEventListener('click', () => open(i));
+        });
+
+        document.querySelectorAll('.gallery-item').forEach((item, i) => {
+            item.addEventListener('click', () => open(i));
+        });
+    })();
 
     // Reveal animations on scroll
     const revealElements = document.querySelectorAll('.reveal');

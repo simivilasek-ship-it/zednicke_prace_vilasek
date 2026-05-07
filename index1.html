@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nezávazná poptávka | Zednické práce Vilášek</title>
+    <meta name="description" content="Poptejte zdarma zateplení, fasádu nebo zednické práce. Rodinná firma z Kravař – odpovíme do 24 hodin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,60 60,30 100,60" fill="none" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <polyline points="35,60 35,90 85,90 85,60" fill="none" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Zednické práce Vilášek</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#Úvod">Úvod</a></li>
+                <li><a href="index.html#Služby">Služby</a></lil
+                <li><a href="index.html#Realizace">Realizace</a></li>
+                <li><a href="index.html#O nás">O nás</a></li>
+                <li><a href="index.html#Kontakt">Kontakt</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1 class="page-hero-title reveal">Nezávazná poptávka</h1>
+        <p class="page-hero-subtitle reveal">Popište nám váš projekt a ozveme se do 24 hodin</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <!-- Formulář -->
+            <form id="contactForm" class="contact-form reveal" style="max-width:760px;margin:0 auto 60px;text-align:left;" novalidate>
+                <div class="form-row">
+                    <input
+                        type="text"
+                        id="formName"
+                        class="form-input"
+                        placeholder="Jméno a příjmení *"
+                        autocomplete="name"
+                        required>
+                    <input
+                        type="text"
+                        id="formPhone"
+                        class="form-input"
+                        placeholder="Telefon nebo e-mail *"
+                        autocomplete="tel"
+                        required>
+                </div>
+                <textarea
+                    id="formMessage"
+                    class="form-input form-textarea"
+                    placeholder="Popište váš projekt – co potřebujete, kde a v jakém rozsahu…"></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="form-submit">Odeslat poptávku</button>
+                    <span class="form-note">Zcela zdarma &middot; Bez závazků &middot; Odpovíme do 24&nbsp;h</span>
+                </div>
+            </form>
+
+            <!-- Kontaktní karty pod formulářem -->
+            <div class="contact-info reveal">
+                <a href="tel:+420739004596" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-label">Telefon</div>
+                    <div class="contact-value">+420 739 004 596</div>
+                </a>
+                <a href="mailto:vilasekmichael@seznam.cz" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-label">E-mail</div>
+                    <div class="contact-value">vilasekmichael@seznam.cz</div>
+                </a>
+                <div class="contact-item" style="cursor:default;">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-label">Pracovní doba</div>
+                    <div class="contact-value">Po–Pá 7:00–17:00</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 19.4 19.4 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2M7.6 4C5.61 4 4 5.61 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C18.39 20 20 18.39 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6M17.25 5.5C17.94 5.5 18.5 6.06 18.5 6.75S17.94 8 17.25 8S16 7.44 16 6.75S16.56 5.5 17.25 5.5M12 7C14.76 7 17 9.24 17 12S14.76 17 12 17S7 14.76 7 12S9.24 7 12 7M12 9C10.34 9 9 10.34 9 12S10.34 15 12 15S15 13.66 15 12S13.66 9 12 9Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 Zednické práce Vilášek. Všechna práva vyhrazena.</p>
+                <p>Kravaře, Opava | <a href="tel:+420739004596">+420 739 004 596</a> | it2529@sspu-opava.cz</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="templatemo-amber-script.js"></script>
+</body>
+
+</html>
+

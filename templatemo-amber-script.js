@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sources = [
             { src: 'images/1.jpg', alt: 'Zateplení domu' },
-            { src: 'images/2.png', alt: 'Fasáda' },
+            { src: 'images/2.jpg', alt: 'Fasáda' },
             { src: 'images/3.jpg', alt: 'Rekonstrukce' },
             { src: 'images/4.jpg', alt: 'Zednické práce' },
             { src: 'images/5.jpg', alt: 'Oprava fasády' },

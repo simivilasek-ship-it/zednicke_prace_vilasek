@@ -376,7 +376,7 @@ nav {
 }
 
 .gallery-item:nth-child(10) .gallery-image {
-    object-position: center 15%;
+    object-position: 30% 15%;
 }
 
 

@@ -42,7 +42,33 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fasády rodinných domů" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zednické práce" } }
         ]
-      }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "author": { "@type": "Person", "name": "Jana K." },
+          "reviewBody": "Zateplení proběhlo rychle a čistě. Pan Vilášek vše vysvětlil, dodržel termín i cenu. Doporučuji."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "author": { "@type": "Person", "name": "Martin S." },
+          "reviewBody": "Fasáda vypadá skvěle, práce bez závad. Férový přístup, žádná překvapení na faktuře."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "author": { "@type": "Person", "name": "Petr N." },
+          "reviewBody": "Osobní přístup a poctivé provedení. Na rozdíl od velkých firem se tu skutečně staráte o výsledek."
+        }
+      ]
     }
     </script>
 
@@ -55,7 +81,7 @@
     </div>
     <header id="header">
         <nav>
-            <a href="#home" class="logo">
+            <a href="#Úvod" class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 80" height="46" style="width:auto;display:block;">
                     <rect x="0" y="0" width="66" height="4" fill="#b06d00"/>
                     <rect x="0" y="76" width="66" height="4" fill="#b06d00"/>
@@ -376,22 +402,36 @@
         <div class="reviews-container">
             <div class="section-header reveal">
                 <h2 class="section-title">Co říkají zákazníci</h2>
+                <div class="reviews-aggregate">
+                    <span class="reviews-stars-row">★★★★★</span>
+                    <span class="reviews-score">5.0</span>
+                    <span class="reviews-count">· 50+ spokojených zákazníků</span>
+                </div>
             </div>
             <div class="reviews-grid reveal">
                 <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">„Zateplení proběhlo rychle a čistě. Pan Vilášek vše vysvětlil, dodržel termín i cenu. Doporučuji."</p>
-                    <div class="review-author">— Jana K., Opava</div>
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Zateplení proběhlo rychle a čistě. Pan Vilášek vše vysvětlil, dodržel termín i cenu. Doporučuji.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-author">Jana K., Opava</div>
+                    </div>
                 </div>
                 <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">„Fasáda vypadá skvěle, práce bez závad. Férový přístup, žádná překvapení na faktuře."</p>
-                    <div class="review-author">— Martin S., Kravaře</div>
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Fasáda vypadá skvěle, práce bez závad. Férový přístup, žádná překvapení na faktuře.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-author">Martin S., Kravaře</div>
+                    </div>
                 </div>
                 <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">„Osobní přístup a poctivé provedení. Na rozdíl od velkých firem se tu skutečně staráte o výsledek."</p>
-                    <div class="review-author">— Petr N., Hlučín</div>
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Osobní přístup a poctivé provedení. Na rozdíl od velkých firem se tu skutečně staráte o výsledek.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-author">Petr N., Hlučín</div>
+                    </div>
                 </div>
             </div>
         </div>

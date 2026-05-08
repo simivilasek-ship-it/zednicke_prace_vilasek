@@ -101,7 +101,7 @@ nav {
 /* SVG logo */
 
 .logo svg {
-    height: 42px;
+    height: 56px;
     width: auto;
     opacity: 0.92;
     transition: opacity 0.3s ease, transform 0.3s ease;

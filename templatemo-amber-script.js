@@ -213,14 +213,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const lbNext = document.getElementById('lightboxNext');
 
         const sources = [
-            { src: 'images/20181126_142730-min.jpg', alt: 'Zateplení domu' },
-            { src: 'images/Copilot_20260429_202255.png', alt: 'Fasáda' },
-            { src: 'images/Gemini_Generated_Image_nkyvfinkyvfinkyv.png', alt: 'Rekonstrukce' },
-            { src: 'images/Copilot_20260429_191603.png', alt: 'Zednické práce' },
-            { src: 'images/ChatGPT Image 29. 4. 2026 19_14_39.png', alt: 'Oprava fasády' },
-            { src: 'images/ChatGPT Image 29. 4. 2026 19_11_48.png', alt: 'Izolace' },
-            { src: 'images/Copilot_20260429_191103.png', alt: 'Rekonstrukce interiéru' },
-            { src: 'images/ChatGPT Image 29. 4. 2026 19_19_53.png', alt: 'Naše práce' },
+            { src: 'images/1.jpg', alt: 'Zateplení domu' },
+            { src: 'images/2.png', alt: 'Fasáda' },
+            { src: 'images/3.jpg', alt: 'Rekonstrukce' },
+            { src: 'images/4.jpg', alt: 'Zednické práce' },
+            { src: 'images/5.jpg', alt: 'Oprava fasády' },
+            { src: 'images/6.jpg', alt: 'Izolace' },
+            { src: 'images/7.jpg', alt: 'Rekonstrukce interiéru' },
+            { src: 'images/8.jpg', alt: 'Naše práce' },
+            { src: 'images/9.jpg', alt: 'Realizace' },
         ];
 
         let current = 0;

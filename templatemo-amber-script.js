@@ -222,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: 'images/7.jpg', alt: 'Rekonstrukce interiéru' },
             { src: 'images/8.jpg', alt: 'Naše práce' },
             { src: 'images/9.jpg', alt: 'Realizace' },
+            { src: 'images/10.jpg', alt: 'Zateplení a fasáda' },
         ];
 
         let current = 0;

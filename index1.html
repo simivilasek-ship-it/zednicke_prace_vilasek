@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Zednické práce Vilášek",
+      "url": "https://zatepleni-vilasek.cz",
+      "telephone": "+420739004596",
+      "email": "vilasekmichael@seznam.cz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kravaře",
+        "addressRegion": "Moravskoslezský kraj",
+        "addressCountry": "CZ"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -33,9 +49,9 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html#Úvod">Úvod</a></li>
-                <li><a href="index.html#Služby">Služby</a></lil
+                <li><a href="index.html#Služby">Služby</a></li>
                 <li><a href="index.html#Realizace">Realizace</a></li>
-                <li><a href="index.html#O nás">O nás</a></li>
+                <li><a href="index.html#o-nas">O nás</a></li>
                 <li><a href="index.html#Kontakt">Kontakt</a></li>
             </ul>
 
@@ -58,11 +74,13 @@
         <div class="contact-container">
 
             <!-- Formulář -->
-            <form id="contactForm" class="contact-form reveal" style="max-width:760px;margin:0 auto 60px;text-align:left;" novalidate>
+            <form action="https://formspree.io/f/mpqbjbjz" method="POST" id="contactForm" class="contact-form reveal" style="max-width:760px;margin:0 auto 60px;text-align:left;">
+                <input type="hidden" name="_subject" value="Nová poptávka – Zednické práce Vilášek">
                 <div class="form-row">
                     <input
                         type="text"
                         id="formName"
+                        name="jmeno"
                         class="form-input"
                         placeholder="Jméno a příjmení *"
                         autocomplete="name"
@@ -70,6 +88,7 @@
                     <input
                         type="text"
                         id="formPhone"
+                        name="kontakt"
                         class="form-input"
                         placeholder="Telefon nebo e-mail *"
                         autocomplete="tel"
@@ -77,6 +96,7 @@
                 </div>
                 <textarea
                     id="formMessage"
+                    name="zprava"
                     class="form-input form-textarea"
                     placeholder="Popište váš projekt – co potřebujete, kde a v jakém rozsahu…"></textarea>
                 <div class="form-actions">
@@ -135,8 +155,8 @@
                 </a>
             </div>
             <div class="footer-text">
-                <p>&copy; 2025 Zednické práce Vilášek. Všechna práva vyhrazena.</p>
-                <p>Kravaře, Opava | <a href="tel:+420739004596">+420 739 004 596</a> | it2529@sspu-opava.cz</p>
+                <p>&copy; 2026 Zednické práce Vilášek. Všechna práva vyhrazena.</p>
+                <p>Kravaře, Opava | <a href="tel:+420739004596">+420 739 004 596</a> | <a href="mailto:vilasekmichael@seznam.cz">vilasekmichael@seznam.cz</a></p>
             </div>
         </div>
     </footer>

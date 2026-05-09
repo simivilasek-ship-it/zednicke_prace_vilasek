@@ -213,16 +213,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const lbNext = document.getElementById('lightboxNext');
 
         const sources = [
-            { src: 'images/1.jpg', alt: 'Zateplení domu' },
-            { src: 'images/2.jpg', alt: 'Fasáda' },
-            { src: 'images/3.jpg', alt: 'Rekonstrukce' },
-            { src: 'images/4.jpg', alt: 'Zednické práce' },
-            { src: 'images/5.jpg', alt: 'Oprava fasády' },
-            { src: 'images/6.jpg', alt: 'Izolace' },
-            { src: 'images/7.jpg', alt: 'Rekonstrukce interiéru' },
-            { src: 'images/8.jpg', alt: 'Naše práce' },
-            { src: 'images/9.jpg', alt: 'Realizace' },
-            { src: 'images/10.jpg', alt: 'Zateplení a fasáda' },
+            { src: 'images/realizace_21.jpg', alt: 'Fasáda rodinného domu' },
+            { src: 'images/realizace_09.jpg', alt: 'Zateplení dvojdomu' },
+            { src: 'images/realizace_11.jpg', alt: 'Fasáda bytového domu' },
+            { src: 'images/realizace_14.jpg', alt: 'Zednické práce Vilášek' },
+            { src: 'images/realizace_24.jpg', alt: 'Moderní fasáda' },
+            { src: 'images/realizace_05.jpg', alt: 'Fasáda bytového domu' },
+            { src: 'images/realizace_03.jpg', alt: 'Zateplení bungalovu' },
+            { src: 'images/realizace_23.jpg', alt: 'Fasáda rodinného domu' },
+            { src: 'images/realizace_25.jpg', alt: 'Rekonstrukce přístavby' },
         ];
 
         let current = 0;

@@ -371,14 +371,6 @@ nav {
     transform: scale(1.06);
 }
 
-.gallery-item:nth-child(7) .gallery-image {
-    object-position: center 20%;
-}
-
-.gallery-item:nth-child(10) .gallery-image {
-    object-position: 37% top;
-}
-
 
 /* Mobile Realizace carousel styling */
 

@@ -189,7 +189,7 @@ nav {
     content: '';
     position: absolute;
     inset: -40px;
-    background: image-set(url("image.webp") type("image/webp"), url("image.jpg") type("image/jpeg")) center / cover no-repeat;
+    background: image-set(url("images/realizace_21.webp") type("image/webp"), url("images/realizace_21.jpg") type("image/jpeg")) center / cover no-repeat;
     filter: blur(6px);
     transform: scale(1.08);
     z-index: 0;

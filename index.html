@@ -1,565 +1,988 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zednické práce Vilášek | Zateplení a fasády Kravaře</title>
-    <meta name="description" content="Rodinná stavební firma z Kravař – zateplení domů, fasády, zednické práce v Opavě a okolí. Kvalitně, rychle, za férové ceny. Nezávazná poptávka zdarma.">
+    <meta
+      name="description"
+      content="Rodinná stavební firma z Kravař – zateplení domů, fasády, zednické práce v Opavě a okolí. Kvalitně, rychle, za férové ceny. Nezávazná poptávka zdarma."
+    />
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zatepleni-vilasek.cz/">
-    <meta property="og:title" content="Zednické práce Vilášek | Zateplení a fasády Kravaře">
-    <meta property="og:description" content="Rodinná stavební firma z Kravař – zateplení domů, fasády a zednické práce v Opavě a okolí. Nezávazná poptávka zdarma.">
-    <meta property="og:image" content="https://zatepleni-vilasek.cz/images/realizace_21.jpg">
-    <meta property="og:locale" content="cs_CZ">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zatepleni-vilasek.cz/" />
+    <meta property="og:title" content="Zednické práce Vilášek | Zateplení a fasády Kravaře" />
+    <meta
+      property="og:description"
+      content="Rodinná stavební firma z Kravař – zateplení domů, fasády a zednické práce v Opavě a okolí. Nezávazná poptávka zdarma."
+    />
+    <meta property="og:image" content="https://zatepleni-vilasek.cz/images/realizace_21.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- Canonical -->
-    <link rel="canonical" href="https://zatepleni-vilasek.cz/">
+    <link rel="canonical" href="https://zatepleni-vilasek.cz/" />
     <!-- PWA -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#b06d00">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#b06d00" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Analytics -->
+    
+    
+    <link rel="stylesheet" href="style.min.css" />
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Zednické práce Vilášek",
-      "description": "Rodinná stavební firma z Kravař – zateplení domů, fasády a zednické práce v Opavě a okolí.",
-      "url": "https://zatepleni-vilasek.cz",
-      "telephone": "+420739004596",
-      "email": "vilasekmichael@seznam.cz",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kravaře",
-        "addressRegion": "Moravskoslezský kraj",
-        "addressCountry": "CZ"
-      },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 49.9333,
-          "longitude": 17.9833
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Zednické práce Vilášek",
+        "description": "Rodinná stavební firma z Kravař – zateplení domů, fasády a zednické práce v Opavě a okolí.",
+        "url": "https://zatepleni-vilasek.cz",
+        "telephone": "+420739004596",
+        "email": "vilasekmichael@seznam.cz",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kravaře",
+          "addressRegion": "Moravskoslezský kraj",
+          "addressCountry": "CZ"
         },
-        "geoRadius": "30000"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Stavební služby",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zateplení rodinných domů" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fasády rodinných domů" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zednické práce" } }
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 49.9333,
+            "longitude": 17.9833
+          },
+          "geoRadius": "30000"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Stavební služby",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Zateplení rodinných domů" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Fasády rodinných domů" }
+            },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zednické práce" } }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "3",
+          "bestRating": "5"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "author": { "@type": "Person", "name": "Jana K." },
+            "reviewBody": "Zateplení proběhlo rychle a čistě. Pan Vilášek vše vysvětlil, dodržel termín i cenu. Doporučuji."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "author": { "@type": "Person", "name": "Martin S." },
+            "reviewBody": "Fasáda vypadá skvěle, práce bez závad. Férový přístup, žádná překvapení na faktuře."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "author": { "@type": "Person", "name": "Petr N." },
+            "reviewBody": "Osobní přístup a poctivé provedení. Na rozdíl od velkých firem se tu skutečně staráte o výsledek."
+          }
         ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "3",
-        "bestRating": "5"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "author": { "@type": "Person", "name": "Jana K." },
-          "reviewBody": "Zateplení proběhlo rychle a čistě. Pan Vilášek vše vysvětlil, dodržel termín i cenu. Doporučuji."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "author": { "@type": "Person", "name": "Martin S." },
-          "reviewBody": "Fasáda vypadá skvěle, práce bez závad. Férový přístup, žádná překvapení na faktuře."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "author": { "@type": "Person", "name": "Petr N." },
-          "reviewBody": "Osobní přístup a poctivé provedení. Na rozdíl od velkých firem se tu skutečně staráte o výsledek."
-        }
-      ]
-    }
+      }
     </script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
     <header id="header">
-        <nav>
-            <a href="#Úvod" class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 80" height="46" style="width:auto;display:block;">
-                    <text x="33" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="72" font-weight="400" fill="#b06d00">V</text>
-                </svg>
-            </a>
+      <nav>
+        <a href="#Úvod" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 66 80"
+            height="46"
+            style="width: auto; display: block"
+          >
+            <text
+              x="33"
+              y="62"
+              text-anchor="middle"
+              font-family="Georgia,serif"
+              font-size="72"
+              font-weight="400"
+              fill="#b06d00"
+            >
+              V
+            </text>
+          </svg>
+        </a>
 
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#Úvod">Úvod</a></li>
+          <li><a href="#Služby">Služby</a></li>
+          <li><a href="#Realizace">Realizace</a></li>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#Kontakt">Kontakt</a></li>
+        </ul>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#Úvod">Úvod</a></li>
-                <li><a href="#Služby">Služby</a></li>
-                <li><a href="#Realizace">Realizace</a></li>
-                <li><a href="#o-nas">O nás</a></li>
-                <li><a href="#Kontakt">Kontakt</a></li>
-            </ul>
-
-
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
-
 
     <!-- Hero Section -->
     <section class="hero-section" id="Úvod">
-        <div class="hero-bg"></div>
-        <div class="hero-shapes">
-        </div>
-        <div class="hero-content reveal">
-            <h1 class="hero-title">Zateplení domů,<br>fasády a rekonstrukce</h1>
-            <h2 class="hero-subtitle">Kvalitní práce, rychlá realizace, férové ceny</h2>
-            <a href="/poptavka/" class="cta-button">Nezávazná poptávka</a>
-        </div>
-        <a href="#benefity" class="hero-scroll" aria-label="Přejít dolů">
-            <span></span>
-        </a>
+      <div class="hero-bg"></div>
+      <div class="hero-shapes"></div>
+      <div class="hero-content reveal">
+        <h1 class="hero-title">Zateplení domů,<br />fasády a rekonstrukce</h1>
+        <h2 class="hero-subtitle">Kvalitní práce, rychlá realizace, férové ceny</h2>
+        <a href="/poptavka/" class="cta-button">Nezávazná poptávka</a>
+      </div>
+      <a href="#benefity" class="hero-scroll" aria-label="Přejít dolů">
+        <span></span>
+      </a>
     </section>
-        <!-- USP / Benefit Section -->
+    <!-- USP / Benefit Section -->
     <section class="usp-section" id="benefity">
-        <div class="usp-container">
-            <div class="usp-grid">
-                <div class="usp-item reveal">
-                    <div class="usp-icon">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M32 4L8 20v24l24 16 24-16V20L32 4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                            <path d="M22 32l6 6 14-14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="usp-text">
-                        <span class="usp-number">Přes 20 let</span>
-                        <span class="usp-label">zkušeností v oboru</span>
-                    </div>
-                </div>
-                <div class="usp-item reveal">
-                    <div class="usp-icon">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="3"/>
-                            <path d="M20 32l8 8 16-16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="usp-text">
-                        <span class="usp-number">50+ realizací</span>
-                        <span class="usp-label">spokojených zákazníků</span>
-                    </div>
-                </div>
-                <div class="usp-item reveal">
-                    <div class="usp-icon">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="8" y="20" width="48" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
-                            <path d="M8 28h48" stroke="currentColor" stroke-width="3"/>
-                            <circle cx="32" cy="44" r="6" fill="none" stroke="currentColor" stroke-width="3"/>
-                        </svg>
-                    </div>
-                    <div class="usp-text">
-                        <span class="usp-number">Cenové nabídky</span>
-                        <span class="usp-label">zdarma a nezávazně</span>
-                    </div>
-                </div>
-                <div class="usp-item reveal">
-                    <div class="usp-icon">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M32 8c-8 0-14 6-14 14 0 10 14 24 14 24s14-14 14-24c0-8-6-14-14-14z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                            <circle cx="32" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="3"/>
-                        </svg>
-                    </div>
-                    <div class="usp-text">
-                        <span class="usp-number">Realizace v</span>
-                        <span class="usp-label">Opavě a okolí</span>
-                    </div>
-                </div>
-                <div class="usp-item reveal">
-                    <div class="usp-icon">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 52V20l20-12 20 12v32" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                            <path d="M12 36h40" stroke="currentColor" stroke-width="3"/>
-                            <path d="M24 36v16" stroke="currentColor" stroke-width="3"/>
-                            <path d="M40 36v16" stroke="currentColor" stroke-width="3"/>
-                        </svg>
-                    </div>
-                    <div class="usp-text">
-                        <span class="usp-number">Rodinná firma</span>
-                        <span class="usp-label">bez subdodavatelů</span>
-                    </div>
-                </div>
+      <div class="usp-container">
+        <div class="usp-grid">
+          <div class="usp-item reveal">
+            <div class="usp-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32 4L8 20v24l24 16 24-16V20L32 4z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 32l6 6 14-14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
+            <div class="usp-text">
+              <span class="usp-number">Přes 20 let</span>
+              <span class="usp-label">zkušeností v oboru</span>
+            </div>
+          </div>
+          <div class="usp-item reveal">
+            <div class="usp-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="3" />
+                <path
+                  d="M20 32l8 8 16-16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <span class="usp-number">50+ realizací</span>
+              <span class="usp-label">spokojených zákazníků</span>
+            </div>
+          </div>
+          <div class="usp-item reveal">
+            <div class="usp-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  x="8"
+                  y="20"
+                  width="48"
+                  height="36"
+                  rx="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+                <path d="M8 28h48" stroke="currentColor" stroke-width="3" />
+                <circle cx="32" cy="44" r="6" fill="none" stroke="currentColor" stroke-width="3" />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <span class="usp-number">Cenové nabídky</span>
+              <span class="usp-label">zdarma a nezávazně</span>
+            </div>
+          </div>
+          <div class="usp-item reveal">
+            <div class="usp-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32 8c-8 0-14 6-14 14 0 10 14 24 14 24s14-14 14-24c0-8-6-14-14-14z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+                <circle cx="32" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="3" />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <span class="usp-number">Realizace v</span>
+              <span class="usp-label">Opavě a okolí</span>
+            </div>
+          </div>
+          <div class="usp-item reveal">
+            <div class="usp-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 52V20l20-12 20 12v32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+                <path d="M12 36h40" stroke="currentColor" stroke-width="3" />
+                <path d="M24 36v16" stroke="currentColor" stroke-width="3" />
+                <path d="M40 36v16" stroke="currentColor" stroke-width="3" />
+              </svg>
+            </div>
+            <div class="usp-text">
+              <span class="usp-number">Rodinná firma</span>
+              <span class="usp-label">bez subdodavatelů</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section class="services-section" id="Služby">
-        <div class="services-container">
-            <div class="section-header reveal">
-                <h2 class="section-title">Služby</h2>
-            </div>
-
-            <div class="services-grid reveal">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <marker id="arL" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto">
-          <path d="M1 1L6 4L1 7" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-        <marker id="arR" viewBox="0 0 8 8" refX="2" refY="4" markerWidth="5" markerHeight="5" orient="auto">
-          <path d="M7 1L2 4L7 7" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-      </defs>
-      <!-- Střecha -->
-      <polygon points="40,5 74,33 6,33" fill="#E9A824"/>
-      <!-- Stěny -->
-      <rect x="12" y="33" width="56" height="40" rx="2" fill="#C47F15"/>
-      <!-- Dveře -->
-      <rect x="30" y="52" width="20" height="21" rx="2" fill="#8B5A0A"/>
-      <!-- Okno -->
-      <rect x="15" y="38" width="13" height="10" rx="1" fill="#F5D078"/>
-      <!-- Izolační panel vlevo -->
-      <rect x="5" y="33" width="7" height="40" rx="1" fill="#F5D078" opacity="0.85"/>
-      <!-- Izolační panel vpravo -->
-      <rect x="68" y="33" width="7" height="40" rx="1" fill="#F5D078" opacity="0.85"/>
-      <!-- Linie v izolaci vlevo -->
-      <line x1="8.5" y1="36" x2="8.5" y2="70" stroke="#C47F15" stroke-width="1" stroke-dasharray="3,3"/>
-      <line x1="11"  y1="36" x2="11"  y2="70" stroke="#C47F15" stroke-width="1" stroke-dasharray="3,3"/>
-      <!-- Linie v izolaci vpravo -->
-      <line x1="70"   y1="36" x2="70"   y2="70" stroke="#C47F15" stroke-width="1" stroke-dasharray="3,3"/>
-      <line x1="72.5" y1="36" x2="72.5" y2="70" stroke="#C47F15" stroke-width="1" stroke-dasharray="3,3"/>
-      <!-- Šipky tepla -->
-      <line x1="1" y1="45" x2="5" y2="45" stroke="#E24B4A" stroke-width="2" stroke-linecap="round" marker-end="url(#arL)"/>
-      <line x1="1" y1="57" x2="5" y2="57" stroke="#E24B4A" stroke-width="2" stroke-linecap="round" marker-end="url(#arL)"/>
-      <line x1="79" y1="45" x2="75" y2="45" stroke="#E24B4A" stroke-width="2" stroke-linecap="round" marker-end="url(#arR)"/>
-      <line x1="79" y1="57" x2="75" y2="57" stroke="#E24B4A" stroke-width="2" stroke-linecap="round" marker-end="url(#arR)"/>
-    </svg>
-
-                    </div>
-                    <h3 class="service-title">Zateplení rodinných domů</h3>
-                    <p class="service-description">Snižte náklady na vytápění a zvyšte komfort bydlení. Kvalitní zateplení vám ušetří peníze každý rok a zároveň prodlouží životnost domu.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Střecha -->
-      <polygon points="40,5 74,33 6,33" fill="#E9A824"/>
-      <!-- Stěny -->
-      <rect x="12" y="33" width="56" height="40" rx="2" fill="#D4C4A0"/>
-      <!-- Fasádní spáry svislé -->
-      <line x1="26" y1="33" x2="26" y2="73" stroke="#A89060" stroke-width="0.8"/>
-      <line x1="40" y1="33" x2="40" y2="73" stroke="#A89060" stroke-width="0.8"/>
-      <line x1="54" y1="33" x2="54" y2="73" stroke="#A89060" stroke-width="0.8"/>
-      <!-- Fasádní spáry vodorovné -->
-      <line x1="12" y1="46" x2="68" y2="46" stroke="#A89060" stroke-width="0.8"/>
-      <line x1="12" y1="59" x2="68" y2="59" stroke="#A89060" stroke-width="0.8"/>
-      <!-- Dveře -->
-      <rect x="30" y="52" width="20" height="21" rx="2" fill="#7A6040"/>
-      <!-- Okno -->
-      <rect x="15" y="36" width="13" height="10" rx="1" fill="#B8D4E8"/>
-      <line x1="21.5" y1="36" x2="21.5" y2="46" stroke="#7AA8C4" stroke-width="0.8"/>
-      <line x1="15"   y1="41" x2="28"   y2="41" stroke="#7AA8C4" stroke-width="0.8"/>
-      <!-- Váleček vpravo -->
-      <rect x="63" y="30" width="10" height="20" rx="3" fill="#E9A824"/>
-      <rect x="65" y="27" width="6"  height="5"  rx="1" fill="#C47F15"/>
-      <line x1="68" y1="23" x2="68" y2="27" stroke="#8B5A0A" stroke-width="2" stroke-linecap="round"/>
-      <!-- Čerstvá omítka pod válečkem -->
-      <rect x="54" y="46" width="14" height="13" rx="1" fill="#E8D8B0" opacity="0.9"/>
-    </svg>
-
-                    </div>
-                    <h3 class="service-title">Fasády rodinných domů</h3>
-                    <p class="service-description">Fasáda je vizitkou vašeho domu. Dodáme moderní vzhled, ochranu před počasím a dlouhou životnost.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Zeď — cihly 4 řady -->
-      <!-- Řada 1 -->
-      <rect x="4"  y="8"  width="34" height="14" rx="2" fill="#C47F15"/>
-      <rect x="42" y="8"  width="34" height="14" rx="2" fill="#C47F15"/>
-      <!-- Řada 2 -->
-      <rect x="4"  y="26" width="20" height="14" rx="2" fill="#BA7517"/>
-      <rect x="28" y="26" width="24" height="14" rx="2" fill="#BA7517"/>
-      <rect x="56" y="26" width="20" height="14" rx="2" fill="#BA7517"/>
-      <!-- Řada 3 -->
-      <rect x="4"  y="44" width="34" height="14" rx="2" fill="#C47F15"/>
-      <rect x="42" y="44" width="34" height="14" rx="2" fill="#C47F15"/>
-      <!-- Řada 4 — nedokončená -->
-      <rect x="4"  y="62" width="20" height="14" rx="2" fill="#BA7517"/>
-      <rect x="28" y="62" width="24" height="14" rx="2" fill="#BA7517"/>
-      <rect x="56" y="62" width="20" height="14" rx="2" fill="none" stroke="#E9A824" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <!-- Spáry vodorovné -->
-      <rect x="4" y="22" width="72" height="4" fill="#E8DCC8" rx="1"/>
-      <rect x="4" y="40" width="72" height="4" fill="#E8DCC8" rx="1"/>
-      <rect x="4" y="58" width="72" height="4" fill="#E8DCC8" rx="1"/>
-      <!-- Spáry svislé řada 1 -->
-      <rect x="38" y="8"  width="4" height="14" fill="#E8DCC8"/>
-      <!-- Spáry svislé řada 2 -->
-      <rect x="24" y="26" width="4" height="14" fill="#E8DCC8"/>
-      <rect x="52" y="26" width="4" height="14" fill="#E8DCC8"/>
-      <!-- Spáry svislé řada 3 -->
-      <rect x="38" y="44" width="4" height="14" fill="#E8DCC8"/>
-      <!-- Spáry svislé řada 4 -->
-      <rect x="24" y="62" width="4" height="14" fill="#E8DCC8"/>
-      <rect x="52" y="62" width="4" height="14" fill="#E8DCC8"/>
-      <!-- Zednická lžíce -->
-      <g transform="translate(62,4) rotate(40)">
-        <rect x="-2" y="0"  width="4" height="14" rx="2" fill="#8B5A0A"/>
-        <ellipse cx="0" cy="21" rx="5" ry="8" fill="#888780"/>
-        <line x1="0" y1="14" x2="0" y2="13" stroke="#666" stroke-width="1.5"/>
-      </g>
-    </svg>
-
-                    </div>
-                    <h3 class="service-title">Zednické práce</h3>
-                    <p class="service-description">Postaráme se o vše od drobných oprav až po kompletní rekonstrukce. Rychle, čistě a profesionálně — bez starostí a zbytečného čekání.</p>
-                </div>
-
-            </div>
+      <div class="services-container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Služby</h2>
         </div>
+
+        <div class="services-grid reveal">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <marker
+                    id="arL"
+                    viewBox="0 0 8 8"
+                    refX="6"
+                    refY="4"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path
+                      d="M1 1L6 4L1 7"
+                      fill="none"
+                      stroke="#E24B4A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </marker>
+                  <marker
+                    id="arR"
+                    viewBox="0 0 8 8"
+                    refX="2"
+                    refY="4"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path
+                      d="M7 1L2 4L7 7"
+                      fill="none"
+                      stroke="#E24B4A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </marker>
+                </defs>
+                <!-- Střecha -->
+                <polygon points="40,5 74,33 6,33" fill="#E9A824" />
+                <!-- Stěny -->
+                <rect x="12" y="33" width="56" height="40" rx="2" fill="#C47F15" />
+                <!-- Dveře -->
+                <rect x="30" y="52" width="20" height="21" rx="2" fill="#8B5A0A" />
+                <!-- Okno -->
+                <rect x="15" y="38" width="13" height="10" rx="1" fill="#F5D078" />
+                <!-- Izolační panel vlevo -->
+                <rect x="5" y="33" width="7" height="40" rx="1" fill="#F5D078" opacity="0.85" />
+                <!-- Izolační panel vpravo -->
+                <rect x="68" y="33" width="7" height="40" rx="1" fill="#F5D078" opacity="0.85" />
+                <!-- Linie v izolaci vlevo -->
+                <line
+                  x1="8.5"
+                  y1="36"
+                  x2="8.5"
+                  y2="70"
+                  stroke="#C47F15"
+                  stroke-width="1"
+                  stroke-dasharray="3,3"
+                />
+                <line
+                  x1="11"
+                  y1="36"
+                  x2="11"
+                  y2="70"
+                  stroke="#C47F15"
+                  stroke-width="1"
+                  stroke-dasharray="3,3"
+                />
+                <!-- Linie v izolaci vpravo -->
+                <line
+                  x1="70"
+                  y1="36"
+                  x2="70"
+                  y2="70"
+                  stroke="#C47F15"
+                  stroke-width="1"
+                  stroke-dasharray="3,3"
+                />
+                <line
+                  x1="72.5"
+                  y1="36"
+                  x2="72.5"
+                  y2="70"
+                  stroke="#C47F15"
+                  stroke-width="1"
+                  stroke-dasharray="3,3"
+                />
+                <!-- Šipky tepla -->
+                <line
+                  x1="1"
+                  y1="45"
+                  x2="5"
+                  y2="45"
+                  stroke="#E24B4A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  marker-end="url(#arL)"
+                />
+                <line
+                  x1="1"
+                  y1="57"
+                  x2="5"
+                  y2="57"
+                  stroke="#E24B4A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  marker-end="url(#arL)"
+                />
+                <line
+                  x1="79"
+                  y1="45"
+                  x2="75"
+                  y2="45"
+                  stroke="#E24B4A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  marker-end="url(#arR)"
+                />
+                <line
+                  x1="79"
+                  y1="57"
+                  x2="75"
+                  y2="57"
+                  stroke="#E24B4A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  marker-end="url(#arR)"
+                />
+              </svg>
+            </div>
+            <h3 class="service-title">Zateplení rodinných domů</h3>
+            <p class="service-description">
+              Snižte náklady na vytápění a zvyšte komfort bydlení. Kvalitní zateplení vám ušetří
+              peníze každý rok a zároveň prodlouží životnost domu.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Střecha -->
+                <polygon points="40,5 74,33 6,33" fill="#E9A824" />
+                <!-- Stěny -->
+                <rect x="12" y="33" width="56" height="40" rx="2" fill="#D4C4A0" />
+                <!-- Fasádní spáry svislé -->
+                <line x1="26" y1="33" x2="26" y2="73" stroke="#A89060" stroke-width="0.8" />
+                <line x1="40" y1="33" x2="40" y2="73" stroke="#A89060" stroke-width="0.8" />
+                <line x1="54" y1="33" x2="54" y2="73" stroke="#A89060" stroke-width="0.8" />
+                <!-- Fasádní spáry vodorovné -->
+                <line x1="12" y1="46" x2="68" y2="46" stroke="#A89060" stroke-width="0.8" />
+                <line x1="12" y1="59" x2="68" y2="59" stroke="#A89060" stroke-width="0.8" />
+                <!-- Dveře -->
+                <rect x="30" y="52" width="20" height="21" rx="2" fill="#7A6040" />
+                <!-- Okno -->
+                <rect x="15" y="36" width="13" height="10" rx="1" fill="#B8D4E8" />
+                <line x1="21.5" y1="36" x2="21.5" y2="46" stroke="#7AA8C4" stroke-width="0.8" />
+                <line x1="15" y1="41" x2="28" y2="41" stroke="#7AA8C4" stroke-width="0.8" />
+                <!-- Váleček vpravo -->
+                <rect x="63" y="30" width="10" height="20" rx="3" fill="#E9A824" />
+                <rect x="65" y="27" width="6" height="5" rx="1" fill="#C47F15" />
+                <line
+                  x1="68"
+                  y1="23"
+                  x2="68"
+                  y2="27"
+                  stroke="#8B5A0A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <!-- Čerstvá omítka pod válečkem -->
+                <rect x="54" y="46" width="14" height="13" rx="1" fill="#E8D8B0" opacity="0.9" />
+              </svg>
+            </div>
+            <h3 class="service-title">Fasády rodinných domů</h3>
+            <p class="service-description">
+              Fasáda je vizitkou vašeho domu. Dodáme moderní vzhled, ochranu před počasím a dlouhou
+              životnost.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Zeď — cihly 4 řady -->
+                <!-- Řada 1 -->
+                <rect x="4" y="8" width="34" height="14" rx="2" fill="#C47F15" />
+                <rect x="42" y="8" width="34" height="14" rx="2" fill="#C47F15" />
+                <!-- Řada 2 -->
+                <rect x="4" y="26" width="20" height="14" rx="2" fill="#BA7517" />
+                <rect x="28" y="26" width="24" height="14" rx="2" fill="#BA7517" />
+                <rect x="56" y="26" width="20" height="14" rx="2" fill="#BA7517" />
+                <!-- Řada 3 -->
+                <rect x="4" y="44" width="34" height="14" rx="2" fill="#C47F15" />
+                <rect x="42" y="44" width="34" height="14" rx="2" fill="#C47F15" />
+                <!-- Řada 4 — nedokončená -->
+                <rect x="4" y="62" width="20" height="14" rx="2" fill="#BA7517" />
+                <rect x="28" y="62" width="24" height="14" rx="2" fill="#BA7517" />
+                <rect
+                  x="56"
+                  y="62"
+                  width="20"
+                  height="14"
+                  rx="2"
+                  fill="none"
+                  stroke="#E9A824"
+                  stroke-width="1.5"
+                  stroke-dasharray="4,3"
+                />
+                <!-- Spáry vodorovné -->
+                <rect x="4" y="22" width="72" height="4" fill="#E8DCC8" rx="1" />
+                <rect x="4" y="40" width="72" height="4" fill="#E8DCC8" rx="1" />
+                <rect x="4" y="58" width="72" height="4" fill="#E8DCC8" rx="1" />
+                <!-- Spáry svislé řada 1 -->
+                <rect x="38" y="8" width="4" height="14" fill="#E8DCC8" />
+                <!-- Spáry svislé řada 2 -->
+                <rect x="24" y="26" width="4" height="14" fill="#E8DCC8" />
+                <rect x="52" y="26" width="4" height="14" fill="#E8DCC8" />
+                <!-- Spáry svislé řada 3 -->
+                <rect x="38" y="44" width="4" height="14" fill="#E8DCC8" />
+                <!-- Spáry svislé řada 4 -->
+                <rect x="24" y="62" width="4" height="14" fill="#E8DCC8" />
+                <rect x="52" y="62" width="4" height="14" fill="#E8DCC8" />
+                <!-- Zednická lžíce -->
+                <g transform="translate(62,4) rotate(40)">
+                  <rect x="-2" y="0" width="4" height="14" rx="2" fill="#8B5A0A" />
+                  <ellipse cx="0" cy="21" rx="5" ry="8" fill="#888780" />
+                  <line x1="0" y1="14" x2="0" y2="13" stroke="#666" stroke-width="1.5" />
+                </g>
+              </svg>
+            </div>
+            <h3 class="service-title">Zednické práce</h3>
+            <p class="service-description">
+              Postaráme se o vše od drobných oprav až po kompletní rekonstrukce. Rychle, čistě a
+              profesionálně — bez starostí a zbytečného čekání.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Portfolio Section with Gallery -->
     <section class="portfolio-section" id="Realizace">
-        <div class="section-header reveal">
-            <h2 class="section-title">Realizace</h2>
-            <p class="section-subtitle">Podívejte se na ukázky našich realizací – zateplení, fasády, rekonstrukce a další stavební práce</p>
+      <div class="section-header reveal">
+        <h2 class="section-title">Realizace</h2>
+        <p class="section-subtitle">
+          Podívejte se na ukázky našich realizací – zateplení, fasády, rekonstrukce a další stavební
+          práce
+        </p>
+      </div>
+
+      <div id="demo" class="carousel d-md-none">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-slide="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button type="button" data-slide="1" aria-label="Slide 2"></button>
+          <button type="button" data-slide="2" aria-label="Slide 3"></button>
+          <button type="button" data-slide="3" aria-label="Slide 4"></button>
+          <button type="button" data-slide="4" aria-label="Slide 5"></button>
+          <button type="button" data-slide="5" aria-label="Slide 6"></button>
+          <button type="button" data-slide="6" aria-label="Slide 7"></button>
+          <button type="button" data-slide="7" aria-label="Slide 8"></button>
+          <button type="button" data-slide="8" aria-label="Slide 9"></button>
         </div>
 
-        <div id="demo" class="carousel d-md-none">
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-slide="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-slide="1" aria-label="Slide 2"></button>
-                <button type="button" data-slide="2" aria-label="Slide 3"></button>
-                <button type="button" data-slide="3" aria-label="Slide 4"></button>
-                <button type="button" data-slide="4" aria-label="Slide 5"></button>
-                <button type="button" data-slide="5" aria-label="Slide 6"></button>
-                <button type="button" data-slide="6" aria-label="Slide 7"></button>
-                <button type="button" data-slide="7" aria-label="Slide 8"></button>
-                <button type="button" data-slide="8" aria-label="Slide 9"></button>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-track">
+            <div class="carousel-item active">
+              <picture
+                ><source srcset="images/realizace_21.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_21.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_21.jpg"
+                  alt="Fasáda rodinného domu"
+              /></picture>
             </div>
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-track">
-                    <div class="carousel-item active">
-                        <picture><source srcset="images/realizace_21.webp" type="image/webp"><img src="images/realizace_21.jpg" alt="Fasáda rodinného domu"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_01.webp" type="image/webp"><img loading="lazy" src="images/realizace_01.jpg" alt="Zateplení dvojdomu"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_11.webp" type="image/webp"><img loading="lazy" src="images/realizace_11.jpg" alt="Fasáda bytového domu"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_14.webp" type="image/webp"><img loading="lazy" src="images/realizace_14.jpg" alt="Zednické práce Vilášek"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_24.webp" type="image/webp"><img loading="lazy" src="images/realizace_24.jpg" alt="Moderní fasáda"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_05.webp" type="image/webp"><img loading="lazy" src="images/realizace_05.jpg" alt="Fasáda bytového domu"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_03.webp" type="image/webp"><img loading="lazy" src="images/realizace_03.jpg" alt="Zateplení bungalovu"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_23.webp" type="image/webp"><img loading="lazy" src="images/realizace_23.jpg" alt="Fasáda rodinného domu"></picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture><source srcset="images/realizace_25.webp" type="image/webp"><img loading="lazy" src="images/realizace_25.jpg" alt="Rekonstrukce přístavby"></picture>
-                    </div>
-                </div>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_01.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_01.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_01.jpg"
+                  alt="Zateplení dvojdomu"
+              /></picture>
             </div>
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" aria-label="Předchozí">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" aria-label="Další">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_11.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_11.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_11.jpg"
+                  alt="Fasáda bytového domu"
+              /></picture>
+            </div>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_14.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_14.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_14.jpg"
+                  alt="Zednické práce Vilášek"
+              /></picture>
+            </div>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_24.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_24.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_24.jpg"
+                  alt="Moderní fasáda"
+              /></picture>
+            </div>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_05.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_05.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_05.jpg"
+                  alt="Fasáda bytového domu"
+              /></picture>
+            </div>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_03.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_03.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_03.jpg"
+                  alt="Zateplení bungalovu"
+              /></picture>
+            </div>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_23.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_23.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_23.jpg"
+                  alt="Fasáda rodinného domu"
+              /></picture>
+            </div>
+            <div class="carousel-item">
+              <picture
+                ><source srcset="images/realizace_25.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  srcset="images/realizace_25.jpg 1x"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="images/realizace_25.jpg"
+                  alt="Rekonstrukce přístavby"
+              /></picture>
+            </div>
+          </div>
         </div>
 
-        <div class="gallery-grid d-none d-md-grid">
-            <div class="gallery-item"><picture><source srcset="images/realizace_21.webp" type="image/webp"><img src="images/realizace_21.jpg" alt="Fasáda rodinného domu" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_01.webp" type="image/webp"><img loading="lazy" src="images/realizace_01.jpg" alt="Zateplení dvojdomu" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_11.webp" type="image/webp"><img loading="lazy" src="images/realizace_11.jpg" alt="Fasáda bytového domu" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_14.webp" type="image/webp"><img loading="lazy" src="images/realizace_14.jpg" alt="Zednické práce Vilášek" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_24.webp" type="image/webp"><img loading="lazy" src="images/realizace_24.jpg" alt="Moderní fasáda" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_05.webp" type="image/webp"><img loading="lazy" src="images/realizace_05.jpg" alt="Fasáda bytového domu" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_03.webp" type="image/webp"><img loading="lazy" src="images/realizace_03.jpg" alt="Zateplení bungalovu" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_23.webp" type="image/webp"><img loading="lazy" src="images/realizace_23.jpg" alt="Fasáda rodinného domu" class="gallery-image"></picture></div>
-            <div class="gallery-item"><picture><source srcset="images/realizace_25.webp" type="image/webp"><img loading="lazy" src="images/realizace_25.jpg" alt="Rekonstrukce přístavby" class="gallery-image"></picture></div>
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" aria-label="Předchozí">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" aria-label="Další">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="gallery-grid d-none d-md-grid">
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_21.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_21.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_21.jpg"
+              alt="Fasáda rodinného domu"
+              class="gallery-image"
+          /></picture>
         </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_01.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_01.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_01.jpg"
+              alt="Zateplení dvojdomu"
+              class="gallery-image"
+          /></picture>
+        </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_11.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_11.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_11.jpg"
+              alt="Fasáda bytového domu"
+              class="gallery-image"
+          /></picture>
+        </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_14.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_14.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_14.jpg"
+              alt="Zednické práce Vilášek"
+              class="gallery-image"
+          /></picture>
+        </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_24.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_24.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_24.jpg"
+              alt="Moderní fasáda"
+              class="gallery-image"
+          /></picture>
+        </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_05.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_05.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_05.jpg"
+              alt="Fasáda bytového domu"
+              class="gallery-image"
+          /></picture>
+        </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_03.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_03.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_03.jpg"
+              alt="Zateplení bungalovu"
+              class="gallery-image"
+          /></picture>
+        </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_23.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_23.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_23.jpg"
+              alt="Fasáda rodinného domu"
+              class="gallery-image"
+          /></picture>
+        </div>
+        <div class="gallery-item">
+          <picture
+            ><source srcset="images/realizace_25.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/realizace_25.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/realizace_25.jpg"
+              alt="Rekonstrukce přístavby"
+              class="gallery-image"
+          /></picture>
+        </div>
+      </div>
     </section>
 
     <!-- Reviews Section -->
     <section class="reviews-section">
-        <div class="reviews-container">
-            <div class="section-header reveal">
-                <h2 class="section-title">Co říkají zákazníci</h2>
-                <div class="reviews-aggregate">
-                    <span class="reviews-stars-row">★★★★★</span>
-                    <span class="reviews-score">5.0</span>
-                    <span class="reviews-count">· 50+ spokojených zákazníků</span>
-                </div>
-            </div>
-            <div class="reviews-grid reveal">
-                <div class="review-card">
-                    <div class="review-quote">"</div>
-                    <p class="review-text">Zateplení proběhlo rychle a čistě. Pan Vilášek vše vysvětlil, dodržel termín i cenu. Doporučuji.</p>
-                    <div class="review-footer">
-                        <div class="review-stars">★★★★★</div>
-                        <div class="review-author">Jana K., Opava</div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="review-quote">"</div>
-                    <p class="review-text">Fasáda vypadá skvěle, práce bez závad. Férový přístup, žádná překvapení na faktuře.</p>
-                    <div class="review-footer">
-                        <div class="review-stars">★★★★★</div>
-                        <div class="review-author">Martin S., Kravaře</div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="review-quote">"</div>
-                    <p class="review-text">Osobní přístup a poctivé provedení. Na rozdíl od velkých firem se tu skutečně staráte o výsledek.</p>
-                    <div class="review-footer">
-                        <div class="review-stars">★★★★★</div>
-                        <div class="review-author">Petr N., Hlučín</div>
-                    </div>
-                </div>
-            </div>
+      <div class="reviews-container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Co říkají zákazníci</h2>
+          <div class="reviews-aggregate">
+            <span class="reviews-stars-row">★★★★★</span>
+            <span class="reviews-score">5.0</span>
+            <span class="reviews-count">· 50+ spokojených zákazníků</span>
+          </div>
         </div>
+        <div class="reviews-grid reveal">
+          <div class="review-card">
+            <div class="review-quote">"</div>
+            <p class="review-text">
+              Zateplení proběhlo rychle a čistě. Pan Vilášek vše vysvětlil, dodržel termín i cenu.
+              Doporučuji.
+            </p>
+            <div class="review-footer">
+              <div class="review-stars">★★★★★</div>
+              <div class="review-author">Jana K., Opava</div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-quote">"</div>
+            <p class="review-text">
+              Fasáda vypadá skvěle, práce bez závad. Férový přístup, žádná překvapení na faktuře.
+            </p>
+            <div class="review-footer">
+              <div class="review-stars">★★★★★</div>
+              <div class="review-author">Martin S., Kravaře</div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-quote">"</div>
+            <p class="review-text">
+              Osobní přístup a poctivé provedení. Na rozdíl od velkých firem se tu skutečně staráte
+              o výsledek.
+            </p>
+            <div class="review-footer">
+              <div class="review-stars">★★★★★</div>
+              <div class="review-author">Petr N., Hlučín</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section class="about-section" id="o-nas">
-        <div class="about-container reveal">
-
-            <!-- LEVÝ SLOUPEC – obrázek -->
-            <div class="about-image">
-                <picture><source srcset="images/o-nas.webp" type="image/webp"><img loading="lazy" src="images/o-nas.jpg" alt="Zateplení domu"></picture>
-            </div>
-
-            <!-- PRAVÝ SLOUPEC – text -->
-            <div class="about-content">
-                <h2> O nás</h2>
-
-                <p>Jsme menší rodinná stavební firma z Kravař, která působí v Opavě a okolí. Zaměřujeme se především na zateplení domů a realizaci fasád, kde klademe důraz na poctivé provedení a dlouhou životnost. Pracujeme jako sehraný tým tří lidí, takže
-                    máte jistotu osobního přístupu, přímé komunikace a kontroly nad každou zakázkou. Nespoléháme na subdodavatele – práci, na které se domluvíme, také sami odvedeme. Zakládáme si na férovém jednání, dodržování termínů a čistotě na stavbě.
-                    Ať už potřebujete kompletní fasádu nebo zateplení domu, můžete se spolehnout na kvalitní výsledek bez zbytečných komplikací.
-                </p>
-            </div>
+      <div class="about-container reveal">
+        <!-- LEVÝ SLOUPEC – obrázek -->
+        <div class="about-image">
+          <picture
+            ><source srcset="images/o-nas.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              srcset="images/o-nas.jpg 1x"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="images/o-nas.jpg"
+              alt="Zateplení domu"
+          /></picture>
         </div>
+
+        <!-- PRAVÝ SLOUPEC – text -->
+        <div class="about-content">
+          <h2>O nás</h2>
+
+          <p>
+            Jsme menší rodinná stavební firma z Kravař, která působí v Opavě a okolí. Zaměřujeme se
+            především na zateplení domů a realizaci fasád, kde klademe důraz na poctivé provedení a
+            dlouhou životnost. Pracujeme jako sehraný tým tří lidí, takže máte jistotu osobního
+            přístupu, přímé komunikace a kontroly nad každou zakázkou. Nespoléháme na subdodavatele
+            – práci, na které se domluvíme, také sami odvedeme. Zakládáme si na férovém jednání,
+            dodržování termínů a čistotě na stavbě. Ať už potřebujete kompletní fasádu nebo
+            zateplení domu, můžete se spolehnout na kvalitní výsledek bez zbytečných komplikací.
+          </p>
+        </div>
+      </div>
     </section>
-
-
-
-
 
     <!-- Contact Section -->
     <section class="contact-section" id="Kontakt">
-        <div class="contact-container">
-            <div class="section-header reveal">
-                <h2 class="section-title">Kontakt</h2>
-                <p class="section-subtitle">Zavolejte nebo napište — nebo vyplňte poptávku a ozveme se sami.</p>
-            </div>
-            <div class="contact-info reveal">
-                <a href="tel:+420739004596" class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-label">Telefon</div>
-                    <div class="contact-value">+420 739 004 596</div>
-                </a>
-                <a href="mailto:vilasekmichael@seznam.cz" class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-label">E-mail</div>
-                    <div class="contact-value">vilasekmichael@seznam.cz</div>
-                </a>
-                <a href="/poptavka/" class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 4H4C2.9 4 2 4.9 2 6V9L12 13L22 9V6C22 4.9 21.1 4 20 4ZM4 11V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V11L12 15L4 11Z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-label">Poptávka</div>
-                    <div class="contact-value">Odeslat formulář →</div>
-                </a>
-            </div>
+      <div class="contact-container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Kontakt</h2>
+          <p class="section-subtitle">
+            Zavolejte nebo napište — nebo vyplňte poptávku a ozveme se sami.
+          </p>
         </div>
+        <div class="contact-info reveal">
+          <a href="tel:+420739004596" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
+                />
+              </svg>
+            </div>
+            <div class="contact-label">Telefon</div>
+            <div class="contact-value">+420 739 004 596</div>
+          </a>
+          <a href="mailto:vilasekmichael@seznam.cz" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                />
+              </svg>
+            </div>
+            <div class="contact-label">E-mail</div>
+            <div class="contact-value">vilasekmichael@seznam.cz</div>
+          </a>
+          <a href="/poptavka/" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20 4H4C2.9 4 2 4.9 2 6V9L12 13L22 9V6C22 4.9 21.1 4 20 4ZM4 11V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V11L12 15L4 11Z"
+                />
+              </svg>
+            </div>
+            <div class="contact-label">Poptávka</div>
+            <div class="contact-value">Odeslat formulář →</div>
+          </a>
+        </div>
+      </div>
     </section>
 
-            <!-- Footer -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
-                    </svg>
-                </a>
-            </div>
-            <div class="footer-text">
-                <p>&copy; 2026 Zednické práce Vilášek. Všechna práva vyhrazena.</p>
-                <p>Kravaře, Opava | <a href="tel:+420739004596">+420 739 004 596</a> | <a href="mailto:vilasekmichael@seznam.cz">vilasekmichael@seznam.cz</a></p>
-            </div>
+      <div class="footer-content">
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z"
+              />
+            </svg>
+          </a>
         </div>
+        <div class="footer-text">
+          <p>&copy; 2026 Zednické práce Vilášek. Všechna práva vyhrazena.</p>
+          <p>
+            Kravaře, Opava | <a href="tel:+420739004596">+420 739 004 596</a> |
+            <a href="mailto:vilasekmichael@seznam.cz">vilasekmichael@seznam.cz</a>
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">&#215;</button>
-        <button class="lightbox-prev" id="lightboxPrev" aria-label="Předchozí">&#8249;</button>
-        <img class="lightbox-img" id="lightboxImg" src="" alt="">
-        <button class="lightbox-next" id="lightboxNext" aria-label="Další">&#8250;</button>
-        <div class="lightbox-counter" id="lightboxCounter"></div>
+      <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">&#215;</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Předchozí">&#8249;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <button class="lightbox-next" id="lightboxNext" aria-label="Další">&#8250;</button>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
     </div>
 
     <!-- Plovoucí tlačítko volání -->
     <a href="tel:+420739004596" class="fab-call" aria-label="Zavolat +420 739 004 596">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
-        </svg>
-        <span class="fab-label">+420 739 004 596</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
+        />
+      </svg>
+      <span class="fab-label">+420 739 004 596</span>
     </a>
 
-    <script src="templatemo-amber-script.js" defer></script>
-    <script defer>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");</script>
-</body>
-
+    <script src="templatemo-amber-script.min.js" defer></script>
+    <script defer>
+      if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");
+    </script>
+  </body>
 </html>

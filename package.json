@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "live-server . --port=5500",
     "serve": "npx live-server",
-    "build": "echo 'Static site - no build needed'",
+    "build": "node scripts/build.cjs",
     "preview": "npm run serve"
   },
   "keywords": [

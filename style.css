@@ -325,6 +325,18 @@ nav {
     cursor: pointer;
 }
 
+/* 2. a 8. fotka vysoká (2 řádky), 9. fotka široká (2 sloupce) */
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(8) {
+    grid-row: span 2;
+    aspect-ratio: unset;
+}
+
+.gallery-item:nth-child(9) {
+    grid-column: span 2;
+    aspect-ratio: 8/3;
+}
+
 .gallery-item::before {
     content: '';
     position: absolute;

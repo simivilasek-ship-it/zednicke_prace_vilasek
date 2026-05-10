@@ -1744,3 +1744,52 @@ footer {
         font-size: 26px;
     }
 }
+
+/* Plovoucí tlačítko volání */
+.fab-call {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    background: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 24px rgba(176, 109, 0, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, padding 0.3s ease;
+    overflow: hidden;
+    max-width: 56px;
+}
+
+.fab-call svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+.fab-label {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    max-width: 0;
+    transition: opacity 0.3s ease, max-width 0.3s ease;
+}
+
+.fab-call:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(176, 109, 0, 0.55);
+    max-width: 260px;
+    padding: 14px 22px;
+}
+
+.fab-call:hover .fab-label {
+    opacity: 1;
+    max-width: 200px;
+}

@@ -575,12 +575,14 @@ nav {
     .d-md-grid {
         display: none !important;
     }
-    /* Odsazení mobilního carouselu od krajů a stejná mezera nahoře/dole */
+    /* Odsazení mobilního carouselu od krajů */
     #demo.carousel {
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 64px);
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 0;
+        overflow: hidden;
+        border-radius: 8px;
     }
     .portfolio-section #demo {
         margin-top: 20px;

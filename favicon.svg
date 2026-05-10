@@ -1,6 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <rect width="200" height="200" fill="#ffffff"/>
-  <rect x="0" y="0" width="200" height="10" fill="#b06d00"/>
-  <rect x="0" y="190" width="200" height="10" fill="#b06d00"/>
-  <text x="100" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="130" font-weight="400" fill="#b06d00">V</text>
+  <text x="100" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="150" font-weight="400" fill="#b06d00">V</text>
 </svg>

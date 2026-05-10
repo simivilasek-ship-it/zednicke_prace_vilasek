@@ -534,6 +534,7 @@ nav {
     background-repeat: no-repeat;
 }
 
+.sr-only,
 .carousel-control-prev .visually-hidden,
 .carousel-control-next .visually-hidden {
     position: absolute !important;

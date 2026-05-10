@@ -89,23 +89,30 @@
             <form action="https://formspree.io/f/mpqbjbjz" method="POST" id="contactForm" class="contact-form reveal" style="max-width:760px;margin:0 auto 60px;text-align:left;">
                 <input type="hidden" name="_subject" value="Nová poptávka – Zednické práce Vilášek">
                 <div class="form-row">
-                    <input
-                        type="text"
-                        id="formName"
-                        name="jmeno"
-                        class="form-input"
-                        placeholder="Jméno a příjmení *"
-                        autocomplete="name"
-                        required>
-                    <input
-                        type="text"
-                        id="formPhone"
-                        name="kontakt"
-                        class="form-input"
-                        placeholder="Telefon nebo e-mail *"
-                        autocomplete="tel"
-                        required>
+                    <div>
+                        <label for="formName" class="sr-only">Jméno a příjmení</label>
+                        <input
+                            type="text"
+                            id="formName"
+                            name="jmeno"
+                            class="form-input"
+                            placeholder="Jméno a příjmení *"
+                            autocomplete="name"
+                            required>
+                    </div>
+                    <div>
+                        <label for="formPhone" class="sr-only">Telefon nebo e-mail</label>
+                        <input
+                            type="text"
+                            id="formPhone"
+                            name="kontakt"
+                            class="form-input"
+                            placeholder="Telefon nebo e-mail *"
+                            autocomplete="tel"
+                            required>
+                    </div>
                 </div>
+                <label for="formMessage" class="sr-only">Popis projektu</label>
                 <textarea
                     id="formMessage"
                     name="zprava"
@@ -158,11 +165,6 @@
                 <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
-                    </svg>
-                </a>
-                <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 19.4 19.4 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2M7.6 4C5.61 4 4 5.61 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C18.39 20 20 18.39 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6M17.25 5.5C17.94 5.5 18.5 6.06 18.5 6.75S17.94 8 17.25 8S16 7.44 16 6.75S16.56 5.5 17.25 5.5M12 7C14.76 7 17 9.24 17 12S14.76 17 12 17S7 14.76 7 12S9.24 7 12 7M12 9C10.34 9 9 10.34 9 12S10.34 15 12 15S15 13.66 15 12S13.66 9 12 9Z" />
                     </svg>
                 </a>
             </div>

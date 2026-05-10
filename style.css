@@ -391,6 +391,8 @@ nav {
     margin: 0 auto;
     border-radius: 6px;
     overflow: hidden;
+    clip-path: inset(0 round 6px);
+    isolation: isolate;
     background: transparent;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     user-select: none;
@@ -402,6 +404,7 @@ nav {
     position: relative;
     width: 100%;
     overflow: hidden;
+    clip-path: inset(0);
 }
 
 .carousel-track {
@@ -576,12 +579,16 @@ nav {
         display: none !important;
     }
     /* Odsazení mobilního carouselu od krajů */
+    .portfolio-section {
+        overflow: hidden;
+    }
     #demo.carousel {
         max-width: calc(100% - 64px);
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 0;
         overflow: hidden;
+        clip-path: inset(0 round 8px);
         border-radius: 8px;
     }
     .portfolio-section #demo {

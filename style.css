@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 94px;
 }
 
 :root {
@@ -28,7 +28,7 @@ body {
 }
 
 section {
-    scroll-margin-top: 94px;
+    scroll-margin-top: 0;
 }
 
 

@@ -739,6 +739,9 @@ nav {
     .reviews-section {
         padding: 60px 20px;
     }
+    .fab-call {
+        display: flex;
+    }
 }
 
 
@@ -1790,7 +1793,7 @@ footer {
     bottom: 24px;
     right: 24px;
     z-index: 900;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -1808,10 +1811,13 @@ footer {
 }
 
 .fab-call svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     fill: #fff;
     flex-shrink: 0;
+    display: block;
+    margin: 0;
+    line-height: 1;
 }
 
 .fab-label {

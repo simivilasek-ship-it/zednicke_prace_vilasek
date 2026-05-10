@@ -189,7 +189,7 @@ nav {
     content: '';
     position: absolute;
     inset: -40px;
-    background: url("image.png") center / cover no-repeat;
+    background: url("image.jpg") center / cover no-repeat;
     filter: blur(6px);
     transform: scale(1.08);
     z-index: 0;

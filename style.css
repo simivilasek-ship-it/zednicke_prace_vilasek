@@ -309,20 +309,25 @@ nav {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
+    gap: 12px;
     max-width: 1400px;
     width: 100%;
     padding: 0 40px;
     margin: 0 auto;
     margin-top: 40px;
+    grid-auto-flow: dense;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
     aspect-ratio: 4/3;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 2. a 8. fotka vysoká (2 řádky), 9. fotka široká (2 sloupce) */
@@ -387,10 +392,11 @@ nav {
     object-position: center;
     display: block;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
 }
 
 .gallery-item:hover .gallery-image {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
 
@@ -401,9 +407,9 @@ nav {
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
-    border-radius: 6px;
+    border-radius: 12px;
     overflow: hidden;
-    clip-path: inset(0 round 6px);
+    clip-path: inset(0 round 12px);
     isolation: isolate;
     background: transparent;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -423,6 +429,7 @@ nav {
     display: flex;
     transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
+    transform-origin: left center;
 }
 
 .carousel-track.dragging {
@@ -444,6 +451,7 @@ nav {
     height: 100%;
     display: block;
     object-fit: cover;
+    object-position: center;
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -1335,9 +1343,9 @@ footer {
     .contact-section {
         padding: 70px 20px 90px;
     }
-        .gallery-grid {
+    .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
+        gap: 8px;
         padding: 0 16px;
     }
         .about-section {
@@ -1435,6 +1443,16 @@ footer {
     }
     .footer-text {
         font-size: 13px;
+    }
+    .carousel {
+        margin: 0 auto;
+        padding: 0 12px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
     }
 }
 

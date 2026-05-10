@@ -182,24 +182,12 @@ nav {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(10, 10, 10, 0.76), rgba(10, 10, 10, 0.17) 30%, rgba(10, 10, 10, 0.84)), url("image.png") center/cover no-repeat;
+    background: url("image.png") center/cover no-repeat;
     background-size: cover;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 20%, rgba(243, 156, 18, 0.24), transparent 32%);
-    pointer-events: none;
-    z-index: 0;
-}
-
 .hero-bg {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(243, 156, 18, 0.08), transparent 60%);
-    opacity: 0.4;
+    display: none;
 }
 
 .hero-content {

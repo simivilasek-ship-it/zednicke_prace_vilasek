@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stránka nenalezena | Zednické práce Vilášek</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .error-page { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 20px; gap:24px; }
+        .error-code { font-size:clamp(5rem,20vw,10rem); font-weight:900; color:var(--accent-color); letter-spacing:-4px; line-height:1; }
+        .error-title { font-size:clamp(1.2rem,3vw,1.8rem); color:var(--text-light); font-weight:300; }
+        .error-link { display:inline-block; padding:14px 36px; background:var(--accent-color); color:#fff; text-decoration:none; font-weight:600; font-size:14px; letter-spacing:1px; text-transform:uppercase; border-radius:2px; transition:transform .3s ease,box-shadow .3s ease; }
+        .error-link:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(176,109,0,.35); }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-code">404</div>
+        <p class="error-title">Tato stránka neexistuje</p>
+        <a href="/" class="error-link">Zpět na hlavní stránku</a>
+    </div>
+</body>
+</html>

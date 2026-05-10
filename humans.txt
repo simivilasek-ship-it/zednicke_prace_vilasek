@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Zednické práce Vilášek
+Contact: vilasekmichael@seznam.cz
+Location: Kravaře, Czech Republic
+
+/* SITE */
+Last update: 2026-05-10
+Language: Czech
+Standards: HTML5, CSS3, JavaScript

@@ -1,0 +1,22 @@
+{
+  "name": "Zednické práce Vilášek",
+  "short_name": "Vilášek",
+  "description": "Zateplení domů, fasády a zednické práce v Opavě a okolí",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#b06d00",
+  "lang": "cs",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

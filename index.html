@@ -20,6 +20,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <!-- Canonical -->
     <link rel="canonical" href="https://zatepleni-vilasek.cz/">
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#b06d00">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -533,7 +540,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
         <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">&#215;</button>
@@ -552,6 +559,7 @@
     </a>
 
     <script src="templatemo-amber-script.js"></script>
+    <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");</script>
 </body>
 
 </html>

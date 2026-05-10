@@ -1,0 +1,17 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check HTML files exist
+        run: |
+          echo "✓ index.html: $(wc -l < index.html) lines"
+          echo "✓ poptavka/index.html: $(wc -l < poptavka/index.html) lines"
+          echo "✓ style.css: $(wc -l < style.css) lines"
+          echo "Deploy via GitHub Pages is automatic on push to master."

@@ -200,6 +200,42 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.querySelectorAll('.form-input').forEach(el => {
             el.addEventListener('input', () => { el.style.borderColor = ''; });
         });
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = contactForm.querySelector('.form-submit');
+            const orig = btn.textContent;
+            btn.textContent = 'Odesílám…';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            try {
+                const res = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    btn.textContent = 'Odesláno ✓';
+                    btn.style.background = '#2d7a3a';
+                    btn.style.opacity = '1';
+                    contactForm.reset();
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                btn.textContent = 'Chyba — zkuste znovu';
+                btn.style.background = '#c0392b';
+                btn.style.opacity = '1';
+            } finally {
+                btn.disabled = false;
+                setTimeout(() => {
+                    btn.textContent = orig;
+                    btn.style.background = '';
+                    btn.style.opacity = '';
+                }, 5000);
+            }
+        });
     }
 
     // ─── Lightbox ─────────────────────────────────────────────────

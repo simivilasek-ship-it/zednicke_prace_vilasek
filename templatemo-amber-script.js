@@ -258,6 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: 'images/realizace_03.jpg', alt: 'Zateplení bungalovu' },
             { src: 'images/realizace_23.jpg', alt: 'Fasáda rodinného domu' },
             { src: 'images/realizace_25.jpg', alt: 'Rekonstrukce přístavby' },
+            { src: 'images/realizace_r1.jpg', alt: 'Fasáda rodinného domu' },
+            { src: 'images/realizace_r2.jpg', alt: 'Moderní fasáda' },
+            { src: 'images/realizace_r3.jpg', alt: 'Zateplení a fasáda' },
+            { src: 'images/realizace_r4.jpg', alt: 'Fasáda bytového domu' },
+            { src: 'images/realizace_r5.jpg', alt: 'Omítka a fasáda' },
         ];
 
         let current = 0;

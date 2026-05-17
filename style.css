@@ -1495,11 +1495,17 @@ footer {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease;
+    animation: revealFallback 0s ease 1.5s forwards;
+}
+
+@keyframes revealFallback {
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+    animation: none;
 }
 
 

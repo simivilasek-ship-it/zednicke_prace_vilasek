@@ -990,7 +990,7 @@
 
     <script src="templatemo-amber-script.js" defer></script>
     <script defer>
-      if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");
+      if ("serviceWorker" in navigator && location.hostname !== "127.0.0.1" && location.hostname !== "localhost") navigator.serviceWorker.register("/sw.js");
     </script>
   </body>
 </html>

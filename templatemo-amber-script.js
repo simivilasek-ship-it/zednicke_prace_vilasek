@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hide loading screen
     setTimeout(() => {
         document.getElementById('loadingScreen').classList.add('hidden');
-    }, 1000);
+    }, 300);
 
     // Header scroll effect
     const header = document.getElementById('header');

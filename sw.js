@@ -1,5 +1,5 @@
 // Service Worker pro offline podporu
-const CACHE_NAME = 'zatepleni-vilasek-v1';
+const CACHE_NAME = 'zatepleni-vilasek-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',

@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: 'images/realizace_23.jpg', alt: 'Fasáda rodinného domu' },
             { src: 'images/realizace_25.jpg', alt: 'Rekonstrukce přístavby' },
             { src: 'images/1.jpg', alt: 'Fasáda rodinného domu' },
-            { src: 'images/2.jpg', alt: 'Moderní fasáda' },
+            
             { src: 'images/4.jpg', alt: 'Zateplení a fasáda' },
             { src: 'images/5.jpg', alt: 'Fasáda bytového domu' },
             { src: 'images/6.jpg', alt: 'Omítka a fasáda' },

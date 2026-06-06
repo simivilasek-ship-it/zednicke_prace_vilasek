@@ -215,11 +215,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: new FormData(contactForm),
                     headers: { 'Accept': 'application/json' }
                 });
-                if (res.ok) {
+                let data = null;
+                try {
+                    data = await res.json();
+                } catch {
+                    data = null;
+                }
+
+                const sent = data
+                    ? (data.ok === true || data.success === true || data.success === 'true')
+                    : res.ok;
+
+                if (sent) {
                     btn.textContent = 'Odesláno ✓';
                     btn.style.background = '#2d7a3a';
                     btn.style.opacity = '1';
                     contactForm.reset();
+                } else if (data && data.message) {
+                    btn.textContent = 'Vyžaduje aktivaci e-mailu';
+                    btn.style.background = '#b06d00';
+                    btn.style.opacity = '1';
+                    alert('Na vilasekmichael@seznam.cz byl odeslán aktivační e-mail. Zkontrolujte i složku spam a klikněte na odkaz „Activate Form“. Poté formulář znovu odešlete.');
                 } else {
                     throw new Error();
                 }

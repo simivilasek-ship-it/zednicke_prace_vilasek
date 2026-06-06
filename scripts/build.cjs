@@ -12,7 +12,8 @@ function minifyCss(css) {
 function minifyJs(js) {
   return js
     .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/(^|\n)\s*\/\/.*(?=\n|$)/g, "\n")
+    .replace(/^\s*\/\/.*$/gm, "")
+    .replace(/\s+\/\/[^\n]*/g, "")
     .replace(/\s+/g, " ")
     .replace(/ ?([{}();,:+\-/*=<>]) ?/g, "$1")
     .trim();

@@ -27,6 +27,10 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .loading-screen { animation: autoHide 0s ease 0.8s forwards; }
+        @keyframes autoHide { to { opacity: 0; pointer-events: none; } }
+    </style>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NCN03QZXW"></script>
     <script>
@@ -184,6 +188,14 @@
     </footer>
 
     <script src="../templatemo-amber-script.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+          var screen = document.getElementById('loadingScreen');
+          if (screen) screen.classList.add('hidden');
+        }, 300);
+      });
+    </script>
     <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");</script>
 </body>
 
